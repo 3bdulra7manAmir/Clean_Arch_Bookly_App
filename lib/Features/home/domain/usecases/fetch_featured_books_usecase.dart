@@ -8,10 +8,16 @@ class FetchFeaturedBooksUsecase
   FetchFeaturedBooksUsecase(this.homeRepo);
   final HomeRepo homeRepo;
 
-  Future< Either<Failur, List<BookEntity>> > fetchFeaturedBooks() async
+  Future< Either<Failur, List<BookEntity>> > call() async
   {
     // if there was a permission for the user that he could fetch it or he can't that permission check op will be done in here.
     return await homeRepo.fetchFeaturedBooks();
   }
   
 }
+
+
+// abstract class Usecase<Type>
+// {
+//   Future<Either<Failur, Type>> call();
+// }

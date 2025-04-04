@@ -3,21 +3,22 @@ import 'package:bookly/Features/home/domain/repo/home_repo.dart';
 import 'package:bookly/core/errors/failur.dart';
 import 'package:dartz/dartz.dart';
 
-class FetchFeaturedBooksUsecase
+class FetchFeaturedBooksUsecase extends Usecase<List<BookEntity>, int>
 {
   FetchFeaturedBooksUsecase(this.homeRepo);
   final HomeRepo homeRepo;
-
-  Future< Either<Failur, List<BookEntity>> > call() async
+  
+  @override
+  Future<Either<Failur, List<BookEntity>>> call([int? param])
   {
-    // if there was a permission for the user that he could fetch it or he can't that permission check op will be done in here.
-    return await homeRepo.fetchFeaturedBooks();
+    // TODO: implement call
+    throw UnimplementedError();
   }
   
 }
 
 
-// abstract class Usecase<Type>
-// {
-//   Future<Either<Failur, Type>> call();
-// }
+abstract class Usecase<Type, Param>
+{
+  Future<Either<Failur, Type>> call([Param param]);
+}

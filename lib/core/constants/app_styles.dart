@@ -2,8 +2,7 @@ import 'package:bookly/config/theme/app_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-abstract class AppStyles
-{
+abstract class AppStyles {
   AppStyles._();
 
   static final textStyle18 = TextStyle(

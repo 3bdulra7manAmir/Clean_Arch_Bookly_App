@@ -7,8 +7,7 @@ import '../../../../../core/constants/app_assets.dart';
 import '../../../../../core/constants/app_styles.dart';
 import 'book_rating.dart';
 
-class BookListViewItem extends StatelessWidget
-{
+class BookListViewItem extends StatelessWidget {
   const BookListViewItem({super.key});
 
   @override

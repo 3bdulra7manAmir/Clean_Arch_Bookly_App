@@ -6,22 +6,20 @@ import 'package:go_router/go_router.dart';
 
 import 'sliding_text.dart';
 
-class SplashViewbody extends StatefulWidget
-{
+class SplashViewbody extends StatefulWidget {
   const SplashViewbody({super.key});
 
   @override
   State<SplashViewbody> createState() => _SplashViewbodyState();
 }
 
-class _SplashViewbodyState extends State<SplashViewbody> with SingleTickerProviderStateMixin
-{
+class _SplashViewbodyState extends State<SplashViewbody>
+    with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
 
   @override
-  void initState()
-  {
+  void initState() {
     super.initState();
     initSlidingAnimation();
 
@@ -29,8 +27,7 @@ class _SplashViewbodyState extends State<SplashViewbody> with SingleTickerProvid
   }
 
   @override
-  void dispose()
-  {
+  void dispose() {
     super.dispose();
     animationController.dispose();
   }
